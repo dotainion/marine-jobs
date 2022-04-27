@@ -1,0 +1,179 @@
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+  max-width: 100%;
+  min-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.container{
+  max-width: 80%;
+  margin: auto;
+  overflow: auto;
+  padding: 0 2rem;
+}
+.card-section{
+  display: grid;
+  align-items: center;
+  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  margin-top: 60px;
+  border-bottom: 1px solid lightgray;
+  padding: 20px;
+
+}
+.card-section:nth-child(even) img{
+  order: 2;
+}
+.card-section h1{
+  font-size: 40px;
+  text-align: center;
+}
+.card-section img{
+  width: 100%;
+  height: 100%;
+}
+.card-section-contents{
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+}
+.card-section-contents p{
+  color: black;
+}
+.form-input{
+  position: relative;
+  margin: 15px 0 15px 0;
+}
+.form-input input{
+  min-width: 98.3%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid rgb(211, 211, 211, 0.1);
+  border-bottom: 1px solid lightgray;
+}
+.form-input div{
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  color: gray;
+  transform: translateY(-50%);
+  background-color: white;
+}
+.application-form{
+  width: 50%;
+  margin: auto;
+}
+.info-main-container{
+  min-width: 100vw;
+  max-height: 50vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/ship.jpg);
+}
+.info-card-container{
+  max-width: 70%;
+  min-width: 70%;
+  margin: auto;
+  text-align: center;
+  user-select: none;
+  display: flex;
+}
+.info-card{
+  flex: 1;
+  width: 30%;
+  min-height: 100%;
+  color: white;
+  padding: 20px 10px;
+  background: -webkit-linear-gradient(right, rgb(45, 0, 128), rgb(45, 0, 128, 0.9));
+}
+.info-card h5, h6{
+  margin: 0;
+}
+.info-card p{
+  margin: 0;
+  min-height: 70px;
+  font-size: 13px;
+  overflow: hidden;
+}
+.info-card svg{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.info-nav-container{
+  padding: 100px 150px;
+}
+.info-nav-container h1{
+  margin: 0;
+  color: rgb(45, 0, 128);
+}
+.info-nav-container h2, p{
+  margin: 0;
+  color: white;
+}
+.info-nav-container div{
+  padding: 10px 0;
+}
+.info-nav-container div button{
+  min-width: 80px;
+  padding: 7px 10px;
+  margin-right: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.info-nav-container div button:hover{
+  border-radius: 25px;
+}
+.rounded-l{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.rounded-r{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.prim-bg{
+  color: white;
+  background-color: var(--primary-color);
+}
+.info-nav-btns-container{
+  color: white;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 8px;
+  width: 80%;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  user-select: none;
+  background-color: rgb(26, 0, 75);
+}
+.info-nav-btns{
+  padding: 2px;
+  font-size: 15px;
+  border-top: 1px solid white;
+  background-color: var(--primary-color);
+}
+.info-nav-btns span{
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgb(26, 0, 75);
+  display: inline-block;
+  margin: 5px;
+  width: 100px;
+  transition: all 0.3s;
+}
+.info-nav-btns span:hover{
+  background-color: rgb(26, 0, 75, 0.5);
+  border-radius: 25px;
+}
+.info-route-container{
+  margin-top: 150px;
+}
