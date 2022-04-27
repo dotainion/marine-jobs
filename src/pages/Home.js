@@ -16,7 +16,7 @@ export const Home = () =>{
 
     const onNavigate = (route) =>{
         const top = $(navbarRef.current).offset().top;
-        $(window).scrollTop(top);
+        window.scrollTo({top: top, behavior: 'smooth'});
         navigate(route);
     }
 
