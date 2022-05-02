@@ -1,11 +1,10 @@
 import React from "react";
-import img from '../images/ship2.avif';
 
 
-export const CardSection = ({animate, children}) =>{
+export const CardSection = ({image, animate, children}) =>{
     return(
         <div className="card-section" data-aos={animate}>
-            <img src={img} alt="" />
+            <img src={image} alt="" />
             <div className="card-section-contents">{children}</div>
         </div>
     )

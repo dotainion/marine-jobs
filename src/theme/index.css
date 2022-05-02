@@ -13,5 +13,14 @@ code {
 }
 :root{
   --primary-color: rgb(45, 0, 128);
-  --secondary-color: ;
+  --secondary-color: rgb(30, 1, 83);
+}
+.home-bg{
+  background-image: url(../images/ship.jpg);
+}
+.contact-bg{
+  background-image: url(../images/contact.jpg);
+}
+.application-bg{
+  background-image: url(../images/application.jpg);
 }

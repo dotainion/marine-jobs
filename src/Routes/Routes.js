@@ -1,8 +1,9 @@
 export const routes = {
     home: '/*',
+    homeDefault: '/',
     application: '/application',
-    aboutUs: '/about/us',
-    contactUs: '/contact/us',
+    about: '/about/us',
+    contact: '/contact/us',
     ourProcess: '/our/process',
     ourWork: '/our/work',
 }

@@ -6,9 +6,12 @@ import './theme/App.css';
 import './theme/animation.css';
 import './theme/responsive.css';
 
-import { Home } from './pages/Home';
-import { ApplicationForm } from './pages/ApplicationForm';
+import { Home } from './pages/home/Home';
+import { Application } from './pages/Application';
 import { routes } from './Routes/Routes';
+import { Contact } from './pages/Contact';
+import { About } from './pages/About';
+import { Test } from './pages/Test';
 
 aos.init({
   /*offset: 100,
@@ -21,8 +24,11 @@ function App() {
   return (
     <HashRouter>
       <Routes>
+        <Route path={'/test'} element={<Test/>} />
         <Route path={routes.home} element={<Home/>} />
-        <Route path={routes.application} element={<ApplicationForm/>} />
+        <Route path={routes.about} element={<About/>} />
+        <Route path={routes.contact} element={<Contact/>} />
+        <Route path={routes.application} element={<Application/>} />
       </Routes>
     </HashRouter>
   );
