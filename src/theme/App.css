@@ -294,6 +294,7 @@ body{
   outline: none;
   border: none;
   cursor: pointer;
+  user-select: none;
   transition: all 0.3s;
 }
 .btn:hover{
@@ -347,6 +348,9 @@ body{
   font-size: 18px;
   margin-top: 10px;
   color: lightgray;
+}
+.test-infos h3{
+  border-bottom: 1px solid lightgray;
 }
 .test-infos svg{
   position: fixed;
@@ -403,7 +407,7 @@ body{
   background-color: var(--primary-color);
 }
 .test-card:hover{
-  border-color: orange;
+  border-color: yellow;
 }
 .test-card > div{
   padding: 5px;
