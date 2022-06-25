@@ -1,220 +1,83 @@
+@media screen and (max-width:1270px){
+    [data-ship-container]{
+        margin-top: 0px;
+    }
+}
+
 @media screen and (max-width:767px){
-  .container{
-    padding: 0 0;
-    max-width: 95%;
-    overflow: hidden;
-  }
-  .card-section-contents{
-    width: 100%;
-    grid-template-columns: none;
-  }
-  .card-section{
-    display: block;
-    grid-gap: 0;
-    margin-top: 5px;
-    padding: 5px;
-  }
-  .card-section h1{
-    font-size: 20px;
-  }
-  .info-card-container{
-    min-width: 95%;
-    max-width: 95%;
-  }
-  .info-card{
-    padding: 3px;
-    min-width: 30%;
-  }
-  .info-card svg{
-    font-size: 15px;
-    margin-bottom: 0;
-  }
-  .info-card h5, h6{
-    font-size: 8px;
-  }
-  .info-card p{
-    font-size: 8px;
-    min-height: 60px;
-  }
-  .info-nav-container{
-    padding: 40px 60px;
-  }
-  .info-nav-btns-container{
-    width: 95%;
-    border-radius: 5px;
-  }
-  .info-nav-btns span{
-    padding: 3px;
-    margin: 2px;
-    width: 58px;
-    font-size: 8px;
-  }
-  .application-form{
-    width: 100%;
-    padding-top: 50px;
-  }
-  .navigate-logo{
-    display: none;
-  }
-  .contact-form{
-    max-width: 100%;
-    min-width: 100%;
-    padding: 10px;
-    display: block;
-  }
-  .contact-container{
-    max-width: 100%;
-    min-width: 100%;
-    padding: 10px;
-    font-size: 18px;
-  }
-  .contact-container p{
-    font-size: 15px;
-  }
-  .contact-form svg{
-    font-size: 30px;
-  }
-  .contact-form span{
-    padding: 10px;
-    margin-top: 20px;
-  }
-  .test-page{
-    overflow-y: auto;
-  }
-  .test-slide{
-    width: 100%;
-    top: 750px;
-    left: 0;
-    position: relative;
-  }
-  .test-card{
-    display: inline-block;
-    width: calc(100% - (3px * 2));
-  }
-  .test-nav{
-    width: 100%;
-    top: 0;
-    z-index: 5;
-  }
-  .test-nav span{
-    display: none;
-  }
-  .test-nav div{
-    display: block;
-    padding: 10px;
-    position: relative;
-    z-index: 5;
-    text-align: center;
-  }
-  .test-nav div[data-logo]{
-    text-align: left;
-  }
-  .test-nav div[data-logo] svg{
-    display: block;
-  }
-  .test-solution{
-    padding: 40px 10px;
-  }
-  .test-infos{
-    color: red;
-    max-height: 90vh;
-    z-index: 20;
-    top: 50px;
-    left: 10px;
-    right: unset;
-    width: 95%;
-    display: none;
-    padding: 10px;
-    font-size: 18px;
-    background-color: white;
-  }
-  .test-infos p{
-    color: black;
-    font-size: 15px;
-  }
-  .test-infos svg{
-    display: block;
-  }
+    [data-card-row] > div{
+        width: calc(100% - 50px);
+    }
 }
 
-@media screen and (max-width: 945px) {
-  .test-nav{
-    width: 100%;
-    left: 0;
-    transform: none;
-  }
-  .test-nav div{
-    padding: 15px;
-  }
+@media screen and (max-width:700px){
+    .logo{
+        width: 264px;
+        height: 120px;
+    }
+    .nav-container [data-catch-phrase]{
+        margin-top: -35px;
+        margin-left: 150px;
+        transition: 0.5s all;
+    }
+    [data-larg-home-text]{
+      font-size: 34px;
+      line-height: 0px;
+    }
 }
 
-@media screen and (max-width:400px){
-  .test-slide{
-    width: 100%;
-    top: 750px;
-    left: 0;
-    position: relative;
-  }
-}
-
-@media screen and (max-width:1015px){
-  .navigate-header{
-    text-align: right;
-    padding-right: 30px;
-  }
-  .test-card-img{
-    min-height: 200px;
-    max-height: 200px;
-  }
-  .test-card-img img{
-    min-height: 200px;
-    max-height: 200px;
-  }
-}
-
-@media screen and (max-width:860px){
-  .navigate-header{
-    text-align: center;
-    user-select: none;
-    position: absolute;
-    background-color: white;
-    right: 0;
-    padding-right: 0;
-    display: none;
-    z-index: 5;
-  }
-  .navigate-header div{
-    display: block;
-    margin-top: 0;
-    color: black;
-    margin-left: 0;
-    width: 100%;
-    border-radius: 0;
-    padding: 5px 20px;
-    text-align: left;
-  }
-  .navigate-header div:hover{
-    background-color: rgb(0, 0, 0, 0.1);
-  }
-  .navigate-menu-btn{
-    display: block;
-  }
-  .navigate-md-backdrop{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100%;
-    z-index: 2;
-    display: none;
-    background-color: rgb(0, 0, 0, 0.2);
-  }
-  .hide-md{
-    display: none !important;
-    transition: all 0.5s;
-  }
-  .show-md{
-    display: block !important;
-    transition: all 0.5s;
-  }
+@media screen and (max-width:580px){
+    .nav-container [data-nav-link-container]{
+        top: 0;
+        color: black;
+        text-align: left;
+        background-color: white;
+        position: fixed;
+        padding: 20px 0;
+        right: 0;
+        margin: 0;
+        width: 200px;
+        height: 100vh;
+        z-index: 1500;
+        display: none;
+        transition: 0.5s all;
+    }
+    .nav-container [data-backdrop]{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1000;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav-container [data-nav]{
+        white-space: nowrap;
+        display: block;
+    }
+    .show-nav{
+        display: block !important;
+    }
+    .nav-container [data-menu]{
+      display: block;
+    }
+    .logo{
+        width: 200px;
+        height: 80px;
+        transition: 0.5s all;
+    }
+    .nav-container [data-catch-phrase]{
+        margin-top: -20px;
+        margin-left: 95px;
+    }
+    [data-larg-home-text]{
+      font-size: 24px;
+      white-space: nowrap;
+      margin-bottom: 10px;
+    }
+    [data-home-head] [data-nav]{
+      top: 60px;
+      font-size: 15px;
+    }
 }

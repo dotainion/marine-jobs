@@ -1,13 +1,30 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Page } from "../container/Page";
-import { Input } from "../widgets/Input";
 import { BsTelephoneInbound } from 'react-icons/bs';
-import { Button } from "../widgets/Buttons";
+import { email } from "../utils/Email";
+import { Layout } from "../Layout/Layout";
 
 
 export const Contact = () =>{
+    const programRef = useRef();
+    const firstNameRef = useRef();
+    const lastNameRef = useRef();
+    const emailRef = useRef();
+    const phoneNumberRef = useRef();
+    const messageRef = useRef();
+
+    const onEmail = () =>{
+        email.send(
+            firstNameRef.current.value + ' ' + firstNameRef.current.value, 
+            'CCA', 
+            phoneNumberRef.current.value, 
+            emailRef.current.value, 
+            programRef.current.value, 
+            messageRef.current.value
+        )
+    }
     return(
-        <Page cssBg={'contact-bg'} dark>
+        <Layout cssBg={'contact-bg'} dark>
             <div className="contact-container">
                 <h2>We'd love to hear from you</h2>
                 <p>Whether you have a question, pricing, need a job or just want to be edicated about working on different shipping vessels</p>
@@ -36,14 +53,17 @@ export const Contact = () =>{
                     </div>
                 </div>
                 <div className="application-form-cc" style={{boxShadow: 'none',}}>
-                    <Input title={'First Name'} />
-                    <Input title={'Last Name'} />
-                    <Input title={'Email'} />
-                    <Input title={'Phone Number'} />
-                    <Input />
-                    <Button title={'Send'} dark />
+                    <select title={'Program'} inputRef={programRef} >
+
+                    </select>
+                    <input title={'First Name'} inputRef={firstNameRef} />
+                    <input title={'Last Name'} inputRef={lastNameRef} />
+                    <input title={'Email'} inputRef={emailRef} />
+                    <input title={'Phone Number'} inputRef={phoneNumberRef} />
+                    <input inputRef={messageRef} />
+                    <button onClick={onEmail} title={'Send'} dark ></button>
                 </div>
             </div>
-        </Page>
+        </Layout>
     )
 }

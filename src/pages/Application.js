@@ -1,22 +1,41 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Page } from "../container/Page";
-import { Button } from "../widgets/Buttons";
-import { Input } from "../widgets/Input";
+import { Layout } from "../Layout/Layout";
+import { email } from "../utils/Email";
 
 
 export const Application = () =>{
+    const programRef = useRef();
+    const nameRef = useRef();
+    const emailRef = useRef();
+    const phoneNumberRef = useRef();
+    const messageRef = useRef();
+
+    const onEmail = () =>{
+        email.send(
+            nameRef.current.value, 
+            'CCA', 
+            phoneNumberRef.current.value, 
+            emailRef.current.value, 
+            programRef.current.value, 
+            messageRef.current.value
+        )
+    }
     return(
-        <Page cssBg={'application-bg'}>
+        <Layout cssBg={'application-bg'}>
             <div className="application-form">
                 <div className="application-form-cc">
-                    <h1>Application Form</h1>
-                    <Input title={'NAME'} />
-                    <Input title={'EMAIL'} />
-                    <Input title={'PHONE'} />
-                    <Input />
-                    <Button title={'Send'} dark />
+                    <h1>Apply Form</h1>
+                    <seelect title={'PROGRAM'} inputRef={programRef} >
+
+                    </seelect>
+                    <input title={'NAME'} inputRef={nameRef} />
+                    <input title={'EMAIL'} inputRef={emailRef} />
+                    <input title={'PHONE'} inputRef={phoneNumberRef} />
+                    <input inputRef={programRef} />
+                    <button onClick={onEmail} title={'Send'} dark ></button>
                 </div>
             </div>
-        </Page>
+        </Layout>
     )
 }
