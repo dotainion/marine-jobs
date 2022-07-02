@@ -7,7 +7,7 @@ import './theme/svgs.css';
 import './theme/animation.css';
 import './theme/responsive.css';
 
-import { Application } from './pages/Application';
+import { Enroll } from './pages/Enroll';
 import { routes } from './Routes/Routes';
 import { Contact } from './pages/Contact';
 import { About } from './pages/About';
@@ -27,7 +27,7 @@ function App() {
         <Route path={routes.homeDefault} element={<Home/>} />
         <Route path={routes.about} element={<About/>} />
         <Route path={routes.contact} element={<Contact/>} />
-        <Route path={routes.application} element={<Application/>} />
+        <Route path={routes.application} element={<Enroll/>} />
       </Routes>
     </HashRouter>
   );

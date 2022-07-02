@@ -54,6 +54,7 @@ body{
   background-color: red;
   color: white !important;
   border-radius: 15px;
+  z-index: 2000;
 }
 [data-work-with-us-btn]:hover{
   background-color: rgb(233, 2, 2) !important;
@@ -94,6 +95,7 @@ body{
 [data-ship-container] img{
   width: 70%;
   height: 100%;
+  user-select: none;
 }
 [data-home-head]{
   position: relative;
@@ -114,7 +116,7 @@ body{
   background: teal;
   background-color: teal;
   padding: 15px;
-  width: calc(33.33% - 50px);
+  width: 330px;
   border-radius: 10px;
   display: inline-flex;
   margin: 5px 10px;
@@ -136,4 +138,16 @@ body{
   font-size: 25px;
   font-weight: bold;
   padding: 10px 30px;
+}
+textarea{
+  resize: none;
+}
+.contact-bg{
+  background-size: cover;
+  background-image: url(../images/contact-bg.png);
+}
+.bg-divider-opicity{
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
 }

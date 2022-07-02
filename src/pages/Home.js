@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { AiFillStar } from 'react-icons/ai';
-import img from '../images/Rectangle 12.png';
-import img2 from '../images/image 5.png';
 import form from '../file/form.docx';
 import $ from 'jquery';
 import { useNavigate } from "react-router-dom";
@@ -15,16 +13,13 @@ import { SecurityIcon } from "../Icons/SecurityIcon";
 export const Home = () =>{
     const navigate = useNavigate();
 
-    const onApply = (preSelected) =>{
-        navigate(routes.application, {state: preSelected});
-    }
     return(
         <Layout>
             <div data-home-head>
                 <div>
                     <div data-larg-home-text>Get International Maritime</div>
                     <div data-larg-home-text>Certification for all seafearers</div>
-                    <div data-nav data-work-with-us-btn>Work With Us</div>
+                    <div onClick={()=>navigate(routes.application)} data-nav data-work-with-us-btn>Apply Now</div>
                 </div>
                 <div data-ship-container>
                     <img src={ship} alt="" />

@@ -29,7 +29,7 @@ export const NavigationBar = () =>{
         setActive(location.pathname);
     }, []);
     return(
-        <div className="nav-container">
+        <div className="nav-container container">
             <div>
                 <Logo/>
                 <div data-catch-phrase>Safy At Sea</div>
