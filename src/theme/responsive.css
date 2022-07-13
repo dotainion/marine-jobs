@@ -8,14 +8,26 @@
     [data-card-row] > div{
         width: calc(33.33% - 50px);
     }
+    [data-card-row] > span{
+      width: calc(99.99% - 50px);
+    }
 }
 
 @media screen and (max-width:767px){
     [data-card-row] > div{
         width: calc(100% - 50px);
     }
+    [data-card-row] > span{
+      width: calc(100% - 50px);
+    }
     .contact-bg{
         margin: 100px 0;
+    }
+    .hide-on-mobile{
+        display: none !important;
+    }
+    .show-on-mobile{
+      display: block;
     }
 }
 

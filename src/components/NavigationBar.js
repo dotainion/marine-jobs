@@ -31,8 +31,10 @@ export const NavigationBar = () =>{
     return(
         <div className="nav-container container">
             <div>
-                <Logo/>
-                <div data-catch-phrase>Safy At Sea</div>
+                <span onClick={()=>navigate(routes.homeDefault)}>
+                    <Logo/>
+                </span>
+                <div data-catch-phrase>Safety At Sea</div>
                 <IoMdMenu data-menu onClick={onShowNavOnMobile} />
             </div>
             <div ref={navRef} data-nav-link-container>

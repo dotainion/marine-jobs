@@ -11,20 +11,28 @@ export const Enroll = () =>{
     const emailRef = useRef();
     const phoneNumberRef = useRef();
     const messageRef = useRef();
+    
+    const inputArrRef = useRef();
 
     const onEmail = () =>{
         email.send(
             nameRef.current.value, 
-            'CCA', 
             phoneNumberRef.current.value, 
             emailRef.current.value, 
             programRef.current.value, 
-            messageRef.current.value
-        )
+            messageRef.current.value,
+            inputArrRef.current
+        );
     }
 
     useEffect(()=>{
-        
+        inputArrRef.current = [
+            nameRef.current, 
+            phoneNumberRef.current,  
+            emailRef.current,  
+            programRef.current,  
+            messageRef.current, 
+        ];
     }, []);
     return(
         <Layout>
@@ -33,15 +41,17 @@ export const Enroll = () =>{
             </div>
             <div className="container d-md-flex bg-divider-opicity">
                 <div className="col-md-6 m-4 pps">
-                    <label className="mt-3">FULL NAME</label>
+                    <label className="mt-3">Full Name</label>
                     <input className="form-control form-text" ref={nameRef} placeholder="John Wick" />
-                    <label className="mt-3">EMAIL</label>
+                    <label className="mt-3">Email</label>
                     <input className="form-control form-text" ref={emailRef} placeholder="example@example.com" />
-                    <label className="mt-3">PHONE NUMBER</label>
+                    <label className="mt-3">Phone Number</label>
                     <input className="form-control form-text" ref={phoneNumberRef} placeholder="1 473 459 8999" />
-                    <label className="mt-3">PROGRAM</label>
+                    <label className="mt-3">Programs</label>
                     <select className="form-control form-select" ref={programRef} >
-                        <option value="3">Three</option>
+                        <option>STCW</option>
+                        <option>Security Awareness</option>
+                        <option>Crowd Management</option>
                     </select>
                     <button className="btn btn-danger float-end mt-3 w-25" onClick={onEmail}>Enroll</button>
                 </div>
